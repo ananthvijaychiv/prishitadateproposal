@@ -21,7 +21,7 @@
         }
         .container {
             background-color: rgba(255, 255, 255, 0.9);
-            padding: 30px;
+            padding: 40px 30px;
             border-radius: 20px;
             box-shadow: 0 8px 24px rgba(211, 47, 47, 0.15);
             backdrop-filter: blur(5px);
@@ -32,20 +32,8 @@
             align-items: center;
             box-sizing: border-box;
         }
-        /* Aesthetic styling for the massive interactive icon display */
-        .icon-display {
-            font-size: 80px;
-            margin-bottom: 15px;
-            line-height: 1;
-            animation: pulse 2s infinite ease-in-out;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.08); }
-            100% { transform: scale(1); }
-        }
         .text-container {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         h1 {
             color: #d32f2f;
@@ -55,7 +43,7 @@
         p {
             color: #444;
             font-size: 16px;
-            margin: 10px 0;
+            margin: 12px 0;
             line-height: 1.5;
         }
         .buttons-container {
@@ -92,9 +80,6 @@
 <body>
 
     <div class="container">
-        <!-- FIXED: Replaced image file tags with an ultra-reliable pulsing mascot icon -->
-        <div id="mainIcon" class="icon-display">🧸</div>
-
         <div class="text-container" id="messageArea">
             <h1>Hello again Prishita! 👋</h1>
             <p>It's been exactly two weeks since I've seen you, two weeks since I've seen that pretty smile and it already feels like an eternity!</p>
@@ -113,9 +98,6 @@
 
     <script>
         function sayYes() {
-            // FIXED: Instantly updates the mascot display into a huge love celebration ring
-            document.getElementById('mainIcon').innerHTML = "💖🎉🥰";
-            
             document.getElementById('messageArea').innerHTML = "<h1>Yay! Best day ever ❤️</h1><p>Can't wait to see you on Saturday. I'll message you the details!</p>";
             document.getElementById('noBtn').style.display = 'none';
             document.getElementById('yesBtn').style.display = 'none';
