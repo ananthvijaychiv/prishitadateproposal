@@ -11,7 +11,6 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            /* Restored the cute background pattern */
             background-color: #ffe6e6;
             background-image: url('https://transparenttextures.com');
             font-family: Arial, sans-serif;
@@ -21,7 +20,7 @@
             overflow-x: hidden; 
         }
         .container {
-            background-color: rgba(255, 255, 255, 0.9); /* Frosted card styling */
+            background-color: rgba(255, 255, 255, 0.9);
             padding: 30px;
             border-radius: 20px;
             box-shadow: 0 8px 24px rgba(211, 47, 47, 0.15);
@@ -33,10 +32,9 @@
             align-items: center;
             box-sizing: border-box;
         }
-        /* Cute bear GIF sizing */
         .gif-display {
-            width: 140px;
-            height: 140px;
+            width: 160px;
+            height: 160px;
             margin-bottom: 10px;
             object-fit: contain;
         }
@@ -88,8 +86,8 @@
 <body>
 
     <div class="container">
-        <!-- Re-linked the sweet shy bear GIF -->
-        <img id="mainGif" class="gif-display" src="https://tenor.com" alt="Cute Bear">
+        <!-- FIXED: Direct GIF link for a sweet waving cartoon bear -->
+        <img id="mainGif" class="gif-display" src="https://giphy.com" alt="Cute Bear">
 
         <div class="text-container" id="messageArea">
             <h1>Hello again Prishita! 👋</h1>
@@ -109,8 +107,8 @@
 
     <script>
         function sayYes() {
-            // Re-linked the happy celebrating bear GIF for the success screen
-            document.getElementById('mainGif').src = "https://tenor.com";
+            // FIXED: Direct GIF link showing a happy, blushing celebrating bear when she clicks Yes
+            document.getElementById('mainGif').src = "https://giphy.com";
             
             document.getElementById('messageArea').innerHTML = "<h1>Yay! Best day ever ❤️</h1><p>Can't wait to see you on Saturday. I'll message you the details!</p>";
             document.getElementById('noBtn').style.display = 'none';
