@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Question For You</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #ffe6e6;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            overflow: hidden; 
+        }
+        .text-container {
+            margin-bottom: 30px;
+            padding: 0 20px;
+        }
+        h1 {
+            color: #d32f2f;
+            margin: 0 0 10px 0;
+            font-size: 32px;
+        }
+        p {
+            color: #555;
+            font-size: 18px;
+            margin: 5px 0;
+            line-height: 1.5;
+        }
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px; 
+            width: 100%;
+            max-width: 400px;
+            height: 100px;
+            position: relative;
+        }
+        button {
+            padding: 12px 28px;
+            font-size: 20px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            height: 50px;
+        }
+        #yesBtn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        #noBtn {
+            background-color: #f44336;
+            color: white;
+            transition: 0.1s;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- This container holds all your lines of text -->
+    <div class="text-container" id="messageArea">
+        <h1>Hello again Prishita! 👋</h1>
+        <p>It's been exactly two weeks since I've seen you, two weeks since I've seen that pretty smile and it already feels like an eternity!</p>
+        <p>In order to cope up with me missing you, it is highly recommended that I see you this weekend and take you out on the 4th date.</p>
+	<p>(Princess Treatment time again!)</p>
+        <p style="font-weight: bold; font-size: 22px; color: #d32f2f; margin-top: 15px;">Will you go on a date with me? 🌹</p>
+	<p>Dinner on Saturday, followed by some good desserts, and of course great pictures!</p>
+		<p>(I see that there are competitors and suitors who loveee clicking you, and I'm upping my game, ahem ahem!)</p>
+	<p>So, I wanted to ask...</p>
+	        <p style="font-weight: bold; font-size: 22px; color: #d32f2f; margin-top: 15px;">Will you go on a fourth date with me? 🌹</p>
+
+
+    </div>
+
+    <div class="buttons-container">
+        <button id="yesBtn" onclick="sayYes()">Yes</button>
+        <button id="noBtn" onmouseover="moveNo()" onclick="moveNo()">No</button>
+    </div>
+
+    <script>
+        function sayYes() {
+            // This clears all the previous lines and shows your custom success message
+            document.getElementById('messageArea').innerHTML = "<h1>Yay! Best day ever ❤️</h1><p>Can't wait to see you. I'll message you the details!</p>";
+            document.getElementById('noBtn').style.display = 'none';
+            document.getElementById('yesBtn').style.display = 'none';
+        }
+
+        function moveNo() {
+            const noBtn = document.getElementById('noBtn');
+            
+            if (noBtn.style.position !== 'absolute') {
+                noBtn.style.position = 'absolute';
+            }
+            
+            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+            
+            noBtn.style.left = x + 'px';
+            noBtn.style.top = y + 'px';
+        }
+    </script>
+
+</body>
+</html>
