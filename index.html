@@ -32,11 +32,17 @@
             align-items: center;
             box-sizing: border-box;
         }
-        .gif-display {
-            width: 160px;
-            height: 160px;
-            margin-bottom: 10px;
-            object-fit: contain;
+        /* Aesthetic styling for the massive interactive icon display */
+        .icon-display {
+            font-size: 80px;
+            margin-bottom: 15px;
+            line-height: 1;
+            animation: pulse 2s infinite ease-in-out;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+            100% { transform: scale(1); }
         }
         .text-container {
             margin-bottom: 20px;
@@ -86,8 +92,8 @@
 <body>
 
     <div class="container">
-        <!-- FIXED: Ultra-stable alternative URL for the waving bear GIF -->
-        <img id="mainGif" class="gif-display" src="https://giphy.com" alt="Cute Bear">
+        <!-- FIXED: Replaced image file tags with an ultra-reliable pulsing mascot icon -->
+        <div id="mainIcon" class="icon-display">🧸</div>
 
         <div class="text-container" id="messageArea">
             <h1>Hello again Prishita! 👋</h1>
@@ -107,8 +113,8 @@
 
     <script>
         function sayYes() {
-            // FIXED: Ultra-stable alternative URL for the celebrating heart bear GIF
-            document.getElementById('mainGif').src = "https://giphy.com";
+            // FIXED: Instantly updates the mascot display into a huge love celebration ring
+            document.getElementById('mainIcon').innerHTML = "💖🎉🥰";
             
             document.getElementById('messageArea').innerHTML = "<h1>Yay! Best day ever ❤️</h1><p>Can't wait to see you on Saturday. I'll message you the details!</p>";
             document.getElementById('noBtn').style.display = 'none';
