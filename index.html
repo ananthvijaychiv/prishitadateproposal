@@ -21,7 +21,7 @@
         }
         .container {
             background-color: rgba(255, 255, 255, 0.9);
-            padding: 30px;
+            padding: 40px 30px;
             border-radius: 20px;
             box-shadow: 0 8px 24px rgba(211, 47, 47, 0.15);
             backdrop-filter: blur(5px);
@@ -32,14 +32,8 @@
             align-items: center;
             box-sizing: border-box;
         }
-        .gif-display {
-            width: 160px;
-            height: 160px;
-            margin-bottom: 10px;
-            object-fit: contain;
-        }
         .text-container {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         h1 {
             color: #d32f2f;
@@ -49,7 +43,7 @@
         p {
             color: #444;
             font-size: 16px;
-            margin: 10px 0;
+            margin: 12px 0;
             line-height: 1.5;
         }
         .buttons-container {
@@ -86,9 +80,6 @@
 <body>
 
     <div class="container">
-        <!-- Direct stable Giphy link for the waving bear -->
-        <img id="mainGif" class="gif-display" src="https://giphy.com" alt="Cute Bear">
-
         <div class="text-container" id="messageArea">
             <h1>Hello again Prishita! 👋</h1>
             <p>It's been exactly two weeks since I've seen you, two weeks since I've seen that pretty smile and it already feels like an eternity!</p>
@@ -107,9 +98,6 @@
 
     <script>
         function sayYes() {
-            // Direct stable Giphy link for the happy dancing bear
-            document.getElementById('mainGif').src = "https://giphy.com";
-            
             document.getElementById('messageArea').innerHTML = "<h1>Yay! Best day ever ❤️</h1><p>Can't wait to see you on Saturday. I'll message you the details!</p>";
             document.getElementById('noBtn').style.display = 'none';
             document.getElementById('yesBtn').style.display = 'none';
