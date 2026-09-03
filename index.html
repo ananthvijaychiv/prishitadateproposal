@@ -21,7 +21,7 @@
         }
         .container {
             background-color: rgba(255, 255, 255, 0.9);
-            padding: 40px 30px;
+            padding: 30px;
             border-radius: 20px;
             box-shadow: 0 8px 24px rgba(211, 47, 47, 0.15);
             backdrop-filter: blur(5px);
@@ -31,6 +31,16 @@
             flex-direction: column;
             align-items: center;
             box-sizing: border-box;
+        }
+        /* Aesthetic styling for her portrait photo */
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%; /* Clean circular format */
+            object-fit: cover; /* Prevents compression distortion */
+            border: 4px solid #fff;
+            box-shadow: 0 4px 12px rgba(211, 47, 47, 0.15);
+            margin-bottom: 15px;
         }
         .text-container {
             margin-bottom: 25px;
@@ -80,6 +90,9 @@
 <body>
 
     <div class="container">
+        <!-- Target configuration pulling your committed repository asset -->
+        <img src="prishita.jpg" alt="Prishita" class="profile-photo">
+
         <div class="text-container" id="messageArea">
             <h1>Hello again Prishita! 👋</h1>
             <p>It's been exactly two weeks since I've seen you, two weeks since I've seen that pretty smile and it already feels like an eternity!</p>
