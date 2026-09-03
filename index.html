@@ -10,64 +10,67 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
-            /* Using a beautiful, soft pastel pink heart background pattern */
+            min-height: 100vh;
+            /* Restored the cute background pattern */
             background-color: #ffe6e6;
             background-image: url('https://transparenttextures.com');
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
-            overflow: hidden; 
+            padding: 20px 0;
+            overflow-x: hidden; 
         }
         .container {
-            background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white card */
+            background-color: rgba(255, 255, 255, 0.9); /* Frosted card styling */
             padding: 30px;
             border-radius: 20px;
-            box-shadow: 0 8px 24px rgba(211, 47, 47, 0.1);
-            backdrop-filter: blur(5px); /* Soft glass effect */
-            max-width: 450px;
+            box-shadow: 0 8px 24px rgba(211, 47, 47, 0.15);
+            backdrop-filter: blur(5px);
+            max-width: 480px;
             width: 90%;
             display: flex;
             flex-direction: column;
             align-items: center;
+            box-sizing: border-box;
         }
-        /* Style for the central cute GIF overlay */
+        /* Cute bear GIF sizing */
         .gif-display {
-            width: 150px;
-            height: 150px;
-            margin-bottom: 15px;
+            width: 140px;
+            height: 140px;
+            margin-bottom: 10px;
             object-fit: contain;
         }
         .text-container {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         h1 {
             color: #d32f2f;
-            margin: 0 0 10px 0;
-            font-size: 28px;
+            margin: 0 0 15px 0;
+            font-size: 26px;
         }
         p {
-            color: #555;
-            font-size: 17px;
-            margin: 5px 0;
-            line-height: 1.4;
+            color: #444;
+            font-size: 16px;
+            margin: 10px 0;
+            line-height: 1.5;
         }
         .buttons-container {
             display: flex;
             justify-content: center;
             gap: 40px; 
             width: 100%;
-            height: 80px;
+            height: 70px;
             position: relative;
+            margin-top: 10px;
         }
         button {
-            padding: 12px 28px;
-            font-size: 20px;
+            padding: 12px 30px;
+            font-size: 18px;
             font-weight: bold;
             border: none;
             border-radius: 8px;
             cursor: pointer;
-            height: 50px;
+            height: 48px;
         }
         #yesBtn {
             background-color: #4CAF50;
@@ -85,19 +88,17 @@
 <body>
 
     <div class="container">
-        <!-- Cute interactive animation image placeholder -->
+        <!-- Re-linked the sweet shy bear GIF -->
         <img id="mainGif" class="gif-display" src="https://tenor.com" alt="Cute Bear">
 
         <div class="text-container" id="messageArea">
             <h1>Hello again Prishita! 👋</h1>
-        <p>It's been exactly two weeks since I've seen you, two weeks since I've seen that pretty smile and it already feels like an eternity!</p>
-        <p>In order to cope up with me missing you, it is highly recommended that I see you this weekend and take you out on the 4th date.</p>
-	<p>(Princess Treatment time again!)</p>
-        <p style="font-weight: bold; font-size: 22px; color: #d32f2f; margin-top: 15px;">Will you go on a date with me? 🌹</p>
-	<p>Dinner on Saturday, followed by some good desserts, and of course great pictures!</p>
-		<p>(I see that there are competitors and suitors who loveee clicking you, and I'm upping my game, ahem ahem!)</p>
-	<p>So, I wanted to ask...</p>
-	        <p style="font-weight: bold; font-size: 22px; color: #d32f2f; margin-top: 15px;">Will you go on a fourth date with me? 🌹</p>
+            <p>It's been exactly two weeks since I've seen you, two weeks since I've seen that pretty smile and it already feels like an eternity!</p>
+            <p>In order to cope up with me missing you, it is highly recommended that I see you this weekend and take you out on the 4th date.</p>
+            <p style="font-style: italic; color: #777;">(Princess Treatment time again!)</p>
+            <p>Dinner on Saturday, followed by some good desserts, and of course great pictures!</p>
+            <p style="font-size: 14px; color: #666;">(I see that there are competitors and suitors who loveee clicking you, and I'm upping my game, ahem ahem!)</p>
+            <p style="font-weight: bold; font-size: 20px; color: #d32f2f; margin-top: 15px;">Will you go on a fourth date with me? 🌹</p>
         </div>
 
         <div class="buttons-container">
@@ -108,10 +109,10 @@
 
     <script>
         function sayYes() {
-            // Updates the GIF to a joyful celebration when she clicks yes!
+            // Re-linked the happy celebrating bear GIF for the success screen
             document.getElementById('mainGif').src = "https://tenor.com";
             
-            document.getElementById('messageArea').innerHTML = "<h1>Yay! Best day ever ❤️</h1><p>Can't wait to see you. I'll message you the details!</p>";
+            document.getElementById('messageArea').innerHTML = "<h1>Yay! Best day ever ❤️</h1><p>Can't wait to see you on Saturday. I'll message you the details!</p>";
             document.getElementById('noBtn').style.display = 'none';
             document.getElementById('yesBtn').style.display = 'none';
         }
@@ -123,7 +124,6 @@
                 noBtn.style.position = 'absolute';
             }
             
-            // Keeps the button moving dynamically within the viewport limits
             const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
             const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
             
